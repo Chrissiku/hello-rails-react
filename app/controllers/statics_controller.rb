@@ -3,7 +3,7 @@ class StaticsController < ApplicationController
   end
   
   def greeting
-    @greetings = Greeting.all
-    render json: {status: 'SUCCESS', message: 'Messages Loaded', data: @greetings}, status: :ok
+    @greetings = Greeting.all.sample.message
+    render json: {status: 'SUCCESS', message: 'Messages Loaded', greeting: @greetings}, status: :ok
   end
 end

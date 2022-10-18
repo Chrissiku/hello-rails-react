@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { ReactDOM } from "react-dom";
-import { getMessage } from "../Redux/Reducer";
+import { getMessage } from "../redux/Reducer";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -18,7 +18,12 @@ const Greeting = () => {
     fetchMessage();
   }, []);
 
-  return <h1>{message}</h1>;
+  return (
+    <>
+      <p>{message}</p>
+      <button onClick={() => fetchMessage()}>Generate new message</button>
+    </>
+  );
 };
 
 export default Greeting;
