@@ -43,7 +43,7 @@ npm install
 or
 
 ```
-yar add
+yarn add
 ```
 ### Run tests
 you can run one of the following command in your terminal
